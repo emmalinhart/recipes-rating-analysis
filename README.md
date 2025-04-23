@@ -37,24 +37,24 @@ The scatter plot below shows no strong association between preparation time and 
 ### Prep Time vs. Average Rating
 The table below shows the average rating of recipes grouped by preparation time. Recipes that take 60 minutes or less tend to receive the highest average ratings, with a slight drop observed for longer cooking times (particularly those between 4 and 8 hours), suggesting that users generally favor quicker, more convenient recipes.
 
-| time_bin   |   avg_rating |
-|:-----------|-------------:|
-| 31–60 min  |            4 |
-| 31–60 min  |            5 |
-| 31–60 min  |            5 |
-| 31–60 min  |            5 |
-| 31–60 min  |            5 |
+| time_bin    |   avg_rating |
+|:------------|-------------:|
+| ≤30 min     |      4.69494 |
+| 31–60 min   |      4.66619 |
+| 61–120 min  |      4.67641 |
+| 121–240 min |      4.66316 |
+| 241-480 min |      4.56732 |
 
 ### Protein (PDV) vs. Average Rating
 The table below shows the average recipe rating grouped by protein content, measured as percent daily value (PDV). Recipes with lower to moderate protein levels (up to 40% PDV) tend to receive slightly higher ratings on average, while recipes with very high protein content see a gradual decline in average rating. This may suggest that users prefer recipes with balanced or moderate nutritional profiles over extremely protein-dense options.
 
 | protein_bin   |   avg_rating |
 |:--------------|-------------:|
-| 0–20%DV       |            4 |
-| 0–20%DV       |            5 |
-| 21–40%DV      |            5 |
-| 21–40%DV      |            5 |
-| 21–40%DV      |            5 |
+| 0–20 %DV      |      4.68035 |
+| 21–40 %DV     |      4.67754 |
+| 41–60 %DV     |      4.6644  |
+| 61-80 %DV     |      4.66423 |
+| 81+ %DV       |      4.65417 |
 
 ## Prediction Problem
 For my prediction problem, I aim to predict the average rating a recipe will receive based on features available at the time it is submitted. This is a regression problem, since the target variable (avg_rating) is continuous. I chose this target because it reflects user satisfaction and is central to understanding what makes a recipe successful. I will evaluate model performance using Root Mean Squared Error (RMSE), which penalizes larger errors more heavily and is standard for regression problems. I avoid using accuracy or classification metrics, since this is not a classification task.
